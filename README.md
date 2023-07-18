@@ -1,6 +1,6 @@
 # ceu windows setup guide
 
-Unfortunately, this "ceu build" doesn't work 100%. It keeps generating the .exe forever, but the .c output file is there and you can compile it with gcc. More details [here](#ceu-windows-setup-guide).
+Unfortunately, this "ceu build" doesn't work 100%. It keeps generating the .exe forever when compiling graphical apps, but the .c output file is there and you can compile it with gcc. More details [here](#ceu-windows-setup-guide).
 
 ## Installing dependencies
 
@@ -48,8 +48,10 @@ download links:
 * https://github.com/fsantanna/pico-ceu/archive/27a1d54699dee3c1566382736b9bfb02096c7e7c.zip (pico-ceu)
 * https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
-1. Extract ceu-v0.2.1.zip to a folder
-2. Extract pico-ceu to a folder named pico
-3. Extract pico-sdl to a folder named sdl
-4. Place sdl inside pico
+1. Extract ceu-v0.2.1.zip to a folder.
+2. Extract pico-ceu and rename the output folder to pico.
+3. Extract pico-sdl and rename the output folder to sdl.
+4. Open sdl\src\pico.h and at the top add "#include <stdio.h>" without the quotes
+4. Place sdl inside pico.
 5. Place pico inside the folder you extracted ceu-v0.2.1.zip to.
+
