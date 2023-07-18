@@ -1,13 +1,11 @@
 # ceu windows setup guide
-
-Unfortunately, this "ceu build" doesn't work 100%. It keeps generating the .exe forever when compiling graphical apps, but the .c output file is there and you can compile it with gcc. More details [here](#ceu-windows-setup-guide).
+## Known issues
+__No executable for graphical apps__: ceu keeps generating the .exe forever when compiling graphical apps, but you can get the .c output file and compile it with gcc.\
+__Worse in powershell__: Compiling ceu command-line apps in powershell doesn't give you an executable as well. But waiting a couple seconds and hitting Ctrl+c makes the .exe appear.
 
 ## Installing dependencies
 
 __WARNING__: This tutorial was tested only in windows 10 64bit.
-1. [mingw (gcc)](#mingw-gcc)
-2. [sdl2](#sdl2)
-3. [java](#java)
 
 ### mingw (gcc)
 
@@ -43,10 +41,10 @@ Now repeat the process to install gcc. But in the end type java instead of gcc. 
 
 ## Installing ceu
 
-download links:
-* https://github.com/fsantanna/dceu/releases/download/v0.2.1/ceu-v0.2.1.zip (ceu)
-* https://github.com/fsantanna/pico-ceu/archive/27a1d54699dee3c1566382736b9bfb02096c7e7c.zip (pico-ceu)
-* https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
+download links:\
+https://github.com/fsantanna/dceu/releases/download/v0.2.1/ceu-v0.2.1.zip (ceu)\
+https://github.com/fsantanna/pico-ceu/archive/27a1d54699dee3c1566382736b9bfb02096c7e7c.zip (pico-ceu)
+https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
 1. Extract ceu-v0.2.1.zip to a folder.
 2. Extract pico-ceu and rename the output folder to pico.
@@ -55,3 +53,20 @@ download links:
 4. Place sdl inside pico.
 5. Place pico inside the folder you extracted ceu-v0.2.1.zip to.
 
+## Testing ceu
+
+### No graphics
+
+__REMINDER__: If you are using powershell, be aware it leads to a bug listed [here](#known-issues).
+
+Open a command prompt, cd into the directory where ceu.jar is and run this command:\
+```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt hello-world.ceu```
+
+### With graphics (pico)
+
+1. Run this command:\
+```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt ./pico/tst/par.ceu --verbose```
+2. When you see ```... c -> exe ...``` press Ctrl+c.
+3. Now run this command:\
+```gcc par.c -lmingw32 -lSDL2main -lSDL2 -lSDL2_gfx -lSDL2_image -lSDL2_ttf -lSDL2_mixer -include ./pico/sdl/src/hash.c -include ./pico/sdl/src/pico.c```
+4. Run par.exe
