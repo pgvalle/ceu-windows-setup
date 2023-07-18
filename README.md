@@ -20,11 +20,11 @@ download link: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20tar
     4. Click on ```Environment Variables...``` You will see a window with 2 sections: ```User variables for {your-username}``` and ```System variables```. Both have an entry named ```Path```.
     5. Double-click one of those entries (user one recommended).
     6. Click on ```New```, hit ```Ctrl+v``` and then Enter.
-4. Open up a command prompt or powershell and run gcc. If you see ```gcc: fatal error: ...``` it worked.
+4. Open up a command prompt or powershell and run ```gcc```. If you see ```gcc: fatal error: ...``` it worked.
 
 ### sdl2
 
-1. Go to the latest release in Releases page and download sdl2-bundle-64bit.zip.
+1. Go to this repo Releases page and download sdl2-bundle-64bit.zip.
 2. Extract the file. You will get three folders: bin, include and lib.
 3. Copy include and lib then paste them inside the subfolder mingw64\\x86_64-w64-mingw32.
 5. Go to the bin folder you extracted and copy everything inside of it.
@@ -32,15 +32,14 @@ download link: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20tar
 
 ### java
 
-download link: https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip
-
+Download link: https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip.\
 Now repeat the process to install gcc. But in the end type java instead of gcc. If you see a big output, it worked.
 
 ## Installing ceu
 
-download links:\
+Download links:\
 https://github.com/fsantanna/dceu/releases/download/v0.2.1/ceu-v0.2.1.zip (ceu)\
-https://github.com/fsantanna/pico-ceu/archive/27a1d54699dee3c1566382736b9bfb02096c7e7c.zip (pico-ceu)
+https://github.com/fsantanna/pico-ceu/archive/27a1d54699dee3c1566382736b9bfb02096c7e7c.zip (pico-ceu)\
 https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
 1. Extract ceu-v0.2.1.zip to a folder.
@@ -53,10 +52,9 @@ https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
 ## Testing ceu
 
-__IMPORTANT__: Do __NOT__ use "\\" in any path you pass to ceu.jar. Always use "/".
+__IMPORTANT__: Do __NOT__ use "\\" in any path you pass to ceu.jar. Always use "/".\
 
-Open command prompt or powershell and cd into the directory where ceu.jar is.\
-Command to test ceu:\
-```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt hello-world.ceu```\
-Command to test ceu with graphics:\
-```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt pico/tst/par.ceu --lib=pico```
+Open command prompt or powershell and cd into the directory where ceu.jar is.
+
+Run ```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt hello-world.ceu```\
+Run ```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt pico/tst/par.ceu --lib=pico```
