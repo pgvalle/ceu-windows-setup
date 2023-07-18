@@ -32,7 +32,7 @@ download link: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20tar
 
 ### java
 
-Download link: https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip.\
+Download link: https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip\
 Now repeat the process to install gcc. But in the end type java instead of gcc. If you see a big output, it worked.
 
 ## Installing ceu
