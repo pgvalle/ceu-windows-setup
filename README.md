@@ -1,7 +1,7 @@
 # ceu windows setup guide
 ## Known issues
 __No executable for graphical apps__: ceu keeps generating the .exe forever when compiling graphical apps, but you can get the .c output file and compile it with gcc.\
-__Worse in powershell__: Compiling ceu command-line apps in powershell doesn't give you an executable as well. But waiting a couple seconds and hitting Ctrl+c makes the .exe appear.
+__Worse in powershell__: Compiling ceu command-line apps in powershell doesn't give you an executable as well. But waiting a couple seconds and hitting Ctrl+c makes it appear.
 
 ## Installing dependencies
 
