@@ -1,7 +1,4 @@
 # ceu windows setup guide
-## Known issues
-__No executable for graphical apps__: ceu keeps generating the .exe forever when compiling graphical apps, but you can get the .c output file and compile it with gcc.\
-__Worse in powershell__: Compiling ceu command-line apps in powershell doesn't give you an executable as well. But waiting a couple seconds and hitting Ctrl+c makes it appear.
 
 ## Installing dependencies
 
@@ -20,10 +17,10 @@ download link: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20tar
     1. Open mingw64\\bin in explorer.
     2. Left-click the path bar in a blank area, then copy the highlighted text.
     3. Type "environment variables" in the search bar and hit Enter.
-    4. Click on "Environment Variables...". You will see a window with 2 sections: "User variables for {your-username}" and "System variables". Both have an entry named "Path".
+    4. Click on ```Environment Variables...``` You will see a window with 2 sections: ```User variables for {your-username}``` and ```System variables```. Both have an entry named ```Path```.
     5. Double-click one of those entries (user one recommended).
-    6. Click on "New", hit Ctrl+v and then Enter.
-4. Open up a command prompt (type cmd in the search bar then hit enter), type gcc and hit enter. If you see "gcc: fatal error: ...", it worked.
+    6. Click on ```New```, hit ```Ctrl+v``` and then Enter.
+4. Open up a command prompt or powershell and run gcc. If you see ```gcc: fatal error: ...``` it worked.
 
 ### sdl2
 
@@ -48,25 +45,18 @@ https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
 1. Extract ceu-v0.2.1.zip to a folder.
 2. Extract pico-ceu and rename the output folder to pico.
-3. Extract pico-sdl and rename the output folder to sdl.
-4. Open sdl\src\pico.h and at the top add "#include <stdio.h>" without the quotes
-4. Place sdl inside pico.
-5. Place pico inside the folder you extracted ceu-v0.2.1.zip to.
+3. Open pico\\ceu.lib with a text editor and add ```-lmingw32 -lSDL2main``` in the beginning of it
+4. Extract pico-sdl and rename the output folder to sdl.
+5. Open sdl\\src\\pico.h and add ```#include <stdio.h>``` at the top
+6. Place sdl inside pico.
+7. Place pico inside the folder you extracted ceu-v0.2.1.zip to.
 
 ## Testing ceu
 
-### No graphics
+__IMPORTANT__: Do __NOT__ use "\\" in any path you pass to ceu.jar. Always use "/".
 
-__REMINDER__: If you are using powershell, be aware it leads to a bug listed [here](#known-issues).
-
-Open a command prompt, cd into the directory where ceu.jar is and run this command:\
-```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt hello-world.ceu```
-
-### With graphics (pico)
-
-1. Run this command:\
-```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt ./pico/tst/par.ceu --verbose```
-2. When you see ```... c -> exe ...``` press Ctrl+c.
-3. Now run this command:\
-```gcc par.c -o par -lmingw32 -lSDL2main -lSDL2 -lSDL2_gfx -lSDL2_image -lSDL2_ttf -lSDL2_mixer -include ./pico/sdl/src/hash.c -include ./pico/sdl/src/pico.c```
-4. Run par.exe
+Open command prompt or powershell and cd into the directory where ceu.jar is.\
+Command to test ceu:\
+```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt hello-world.ceu```\
+Command to test ceu with graphics:\
+```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt pico/tst/par.ceu --lib=pico```
