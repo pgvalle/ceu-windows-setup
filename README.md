@@ -68,5 +68,5 @@ Open a command prompt, cd into the directory where ceu.jar is and run this comma
 ```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt ./pico/tst/par.ceu --verbose```
 2. When you see ```... c -> exe ...``` press Ctrl+c.
 3. Now run this command:\
-```gcc par.c -lmingw32 -lSDL2main -lSDL2 -lSDL2_gfx -lSDL2_image -lSDL2_ttf -lSDL2_mixer -include ./pico/sdl/src/hash.c -include ./pico/sdl/src/pico.c```
+```gcc par.c -o par -lmingw32 -lSDL2main -lSDL2 -lSDL2_gfx -lSDL2_image -lSDL2_ttf -lSDL2_mixer -include ./pico/sdl/src/hash.c -include ./pico/sdl/src/pico.c```
 4. Run par.exe
