@@ -49,11 +49,12 @@ https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 5. Open sdl\\src\\pico.h and add ```#include <stdio.h>``` at the top
 6. Place sdl inside pico.
 7. Place pico inside the folder you extracted ceu-v0.2.1.zip to.
+8. Download ceu.bat in this repo Releases page and place it where you placed pico.
 
 ## Testing ceu
 
-__IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling graphical apps and do __NOT__ use ```\``` in any path you pass to ceu.jar. Always use ```/```.
+__IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling pico apps and do __NOT__ use ```\``` in any path you pass to ceu.jar. Always use ```/```.
 
-Download ceu.bat in this repo Releases page. This is optional, but it will save you from having to run scary commands. Just be sure to place it where ceu.jar is. Now open command prompt or powershell, cd into where ceu.jar is and run these commands:\
+Open command prompt or powershell, cd into where ceu.jar is and run these commands:\
 ```ceu.bat hello-world.ceu```\
 ```ceu.bat pico/tst/par.ceu --lib=pico```
