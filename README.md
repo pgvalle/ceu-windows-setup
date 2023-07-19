@@ -52,8 +52,8 @@ https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
 ## Testing ceu
 
-__IMPORTANT__: Do __NOT__ use "\\" in any path you pass to ceu.jar. Always use "/".
+__IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling graphical apps and do __NOT__ use ```\``` in any path you pass to ceu.jar. Always use ```/```.
 
-Open command prompt or powershell, cd into where ceu.jar is and run these commands:\
-```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt hello-world.ceu```\
-```java -Xmx500M -Xms500M -ea -cp ceu.jar dceu.MainKt pico/tst/par.ceu --lib=pico```
+Download ceu.bat in this repo Releases page. This is optional, but it will save you from having to run scary commands. Just be sure to place it where ceu.jar is. Now open command prompt or powershell, cd into where ceu.jar is and run these commands:\
+```ceu.bat hello-world.ceu```\
+```ceu.bat pico/tst/par.ceu --lib=pico```
