@@ -53,7 +53,7 @@ https://github.com/fsantanna/pico-sdl/archive/refs/heads/main.zip (pico-sdl)
 
 ## Testing ceu
 
-__IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling pico apps and do __NOT__ use ```\``` in any path you pass to ceu.jar. Always use ```/```.
+__IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling pico apps and do __NOT__ use ```\``` in any path you pass to ceu. Always use ```/```.
 
 Open command prompt or powershell, cd into where ceu.jar is and run these commands:\
 ```ceu.bat hello-world.ceu```\
