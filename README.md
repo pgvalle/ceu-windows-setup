@@ -69,7 +69,7 @@ Download ceu.bat in this repo Releases page and place it inside ceu/.
 
 __IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling graphical apps and do __NOT__ use Windows path style. Use Unix path style. That basically means you must use ```/``` instead of ```\``` in any path you pass to ceu.
 
-Open command prompt or powershell, cd into where ceu.jar is and run these commands:\
+Open command prompt or powershell, cd into where ceu.jar is and run these commands:
 ```
 ceu.bat hello-world.ceu
 ceu.bat pico/tst/par.ceu --lib=pico
