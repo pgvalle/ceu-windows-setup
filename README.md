@@ -8,33 +8,33 @@
 
 Go to [winlibs.com](https://winlibs.com/) and get any gcc release for Win64 with POSIX threads. I recommend a more recent version, though.
 
-Extract the (7-)zip archive. You'll get a folder named mingw64\\. Place it somewhere in your drive. Preferably not within a system directory or other users' directories.
+Extract the (7-)zip file. You'll get a folder named mingw64/. Place it somewhere in your drive. Preferably not within a system directory or other users' directories.
 
-Then you should add ...\mingw64\bin\ to the Path environment variable. Here's a quick tutorial to help you with that: https://www.youtube.com/watch?v=EuoEYPLtsZ8
+Then you should add .../mingw64/bin/ to the Path environment variable. Here's a quick tutorial to help you with that: https://www.youtube.com/watch?v=EuoEYPLtsZ8
 
-To check out if gcc is working, open a cmd window and try to run gcc --version
+To check out if gcc is working, open up cmd and try running ```gcc --version```
 
 ## Installing SDL2
 
 To facilitate things here, I created a sdl2-bundle zip so that you don't have trouble downloading and building everything. Just go to the releases page of this repo. You'll find it there.
 
-Extract the zip. There will be three folders: bin, include and lib.
+Extract the zip file. There will be three folders: bin/, include/ and lib/.
 
-Copy bin\ and paste it inside ...\mingw64\.
+Copy bin/ and paste it inside .../mingw64/.
 
-Copy both include\ and lib\\, then paste them inside ...\mingw64\x86_64-w64-mingw32\
+Copy both include/ and lib/, then paste them inside .../mingw64/x86_64-w64-mingw32/
 
 ## Installing Java
 
 I have a link to an openjdk release. Which is the one I used, of course: https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip
 
-Extract the zip archive. You'll get a folder named jdk-11.0.2\\. Now repeat the exact same process you did to setup gcc.
+Extract the zip archive. You'll get a folder named jdk-11.0.2/. Now repeat the exact same process you did to setup gcc.
 
 ## Installing ceu
 
 Download [ceu](https://github.com/fsantanna/dceu) (releases page), [pico-ceu](https://github.com/fsantanna/pico-ceu) and [pico-sdl](https://github.com/fsantanna/pico-sdl).
 
-Extract the .zip files.
+Extract the zip files.
 
 Create the following folder structure:
 ```
