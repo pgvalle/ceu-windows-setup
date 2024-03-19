@@ -32,9 +32,11 @@ Extract the zip archive. You'll get a folder named jdk-11.0.2\\. Now repeat the 
 
 ## Installing ceu
 
-Download [ceu](https://github.com/fsantanna/dceu) (releases page), [pico-ceu](https://github.com/fsantanna/pico-ceu) and [pico-sdl](https://github.com/fsantanna/pico-sdl)
+Download [ceu](https://github.com/fsantanna/dceu) (releases page), [pico-ceu](https://github.com/fsantanna/pico-ceu) and [pico-sdl](https://github.com/fsantanna/pico-sdl).
 
-Now create this folder structure:
+Extract the .zip files.
+
+Create the following folder structure:
 ```
 ceu/
   ceu
@@ -57,11 +59,11 @@ ceu/
       tiny.ttf
 ```
 
-Open ceu/pico/ceu.lib with a text editor and add ```-lmingw32 -lSDL2main``` at the beginning
+Open ceu/pico/ceu.lib with a text editor and add ```-lmingw32 -lSDL2main``` at the beginning.
 
-Open ceu/pico/sdl/src/pico.h and add ```#include <stdio.h>``` at the top
+Open ceu/pico/sdl/src/pico.h and add ```#include <stdio.h>``` at the top.
 
-Download ceu.bat in this repo Releases page and place it inside ceu/
+Download ceu.bat in this repo Releases page and place it inside ceu/.
 
 ## Testing ceu
 
