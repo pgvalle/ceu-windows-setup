@@ -1,7 +1,7 @@
 ## Notice
 
 [ceu (repo)](https://github.com/fsantanna/dceu) is a synchronous programming language created by Francisco Figueiredo Goytacaz Sant'anna.
-It makes you capable of using Concurrency alongside Event-Driven Programming in a structured manner, extending the classical structured paradigm we all know and use.
+It allows you to use Concurrency alongside Event-Driven Programming in a structured manner, extending the classical structured paradigm we all know and use.
 
 Here's the official website (Old Version): http://ceu-lang.org/.
 
