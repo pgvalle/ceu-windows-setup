@@ -70,6 +70,8 @@ Open ceu/pico/ceu.lib with a text editor and add ```-lmingw32 -lSDL2main``` at t
 
 Open ceu/pico/sdl/src/pico.h and add ```#include <stdio.h>``` at the top.
 
+Go to ceu/pico/, delete pico.ceu and rename pico-x.ceu to pico.ceu
+
 Download ceu.bat in this repo Releases page and place it inside ceu/.
 
 ## Testing ceu
@@ -79,5 +81,5 @@ __IMPORTANT__: Do __NOT__ forget to pass ```--lib=pico``` when compiling graphic
 Open command prompt or powershell, cd into where ceu.jar is and run these commands:
 ```
 ceu.bat hello-world.ceu
-ceu.bat pico/tst/par.ceu --lib=pico
+ceu.bat pico/tst/all.ceu --lib=pico
 ```
