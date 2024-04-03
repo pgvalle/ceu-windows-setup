@@ -76,13 +76,13 @@ ceu/
       tiny.ttf
 ```
 
-Open ceu/pico/ceu.lib in a text editor and add ```-lmingw32 -lSDL2main``` at the beginning.
+Replace ceu/pico/ceu.lib with the ceu.lib of this repo's releases page.
 
 Go to ceu/pico/, delete pico.ceu and rename pico-x.ceu to pico.ceu.
 
 (Optional) Delete ceu/ceu. It's a bash script, so it won't serve any purpose.
 
-Download ceu.bat in this repo Releases page and place it inside ceu/.
+Download ceu.bat from this repo Releases page and place it inside ceu/.
 
 
 ## Testing ceu
